@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 function Navbar() {
   return (
-    <div className=" bg-gray-200">
+    <div className=" bg-orange-200">
       <div className="navbar align-text">
         <div className=" navbar-start">
           <Link className="btn btn-accent" href="/">
@@ -20,7 +20,7 @@ function Navbar() {
             Price
           </Link>
         </div>
-        <div className=" navbar-end">3</div>
+        
       </div>
     </div>
   );

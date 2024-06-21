@@ -1,11 +1,7 @@
-import React from 'react';
+import ProductList from "@/components/ProductList";
 
-function Home() {
-  return (
-    <div>
-      Home
-    </div>
-  );
+async function Home() {
+  return <ProductList />;
 }
 
 export default Home;
