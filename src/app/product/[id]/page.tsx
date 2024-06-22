@@ -30,7 +30,7 @@ async function SingleProduct(params: ParamsInterFace) {
         {product.images.map((img) => {
           return (
             <div className="carousel-item border  border-gray-600  " key={img}>
-              <Image src={img} alt={product.title} />
+              <Image src={img} alt={product.title} width={303} height={303}/>
             </div>
           );
         })}
