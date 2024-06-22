@@ -26,7 +26,7 @@ async function ProductList() {
             key={product.id}
           >
             <figure className=" border-r-2 border-orange-500">
-              <Image src={product.thumbnail} alt={product.title} />
+              <Image src={product.thumbnail} alt={product.title} width={403} height={403}/>
             </figure>
             <div className="card-body">
               <h1 className="card-title">{product.title}</h1>
