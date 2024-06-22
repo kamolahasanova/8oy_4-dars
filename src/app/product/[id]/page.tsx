@@ -9,6 +9,8 @@ interface Product {
   images: [];
   description: string;
   price: number;
+  category: string;
+  brand: string;
 }
 
 const request = async (id: number) => {
@@ -32,8 +34,12 @@ async function SingleProduct(params: ParamsInterFace) {
       </div>
 
       <div className="card-body max-w-[60%]">
-        
         <h1 className="card-title">{product.title}</h1>
+        <p>
+          <span className="font-bold ">Category:</span>
+          {product.category}
+        </p>
+        <p><span className="font-bold ">Brand:</span>{product.brand}</p>
         <p>
           <span className="  font-bold">Price: </span>
           {new Intl.NumberFormat("us-Us", {
