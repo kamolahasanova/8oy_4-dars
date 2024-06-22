@@ -11,6 +11,7 @@ interface Product {
   price: number;
   category: string;
   brand: string;
+  warrantyInformation: string;
 }
 
 const request = async (id: number) => {
@@ -39,7 +40,11 @@ async function SingleProduct(params: ParamsInterFace) {
           <span className="font-bold ">Category:</span>
           {product.category}
         </p>
-        <p><span className="font-bold ">Brand:</span>{product.brand}</p>
+        <p>
+          <span className="font-bold ">Brand:</span>
+          {product.brand}
+        </p>
+        <p><span className="font-bold">warranty:</span>{product.warrantyInformation}</p>
         <p>
           <span className="  font-bold">Price: </span>
           {new Intl.NumberFormat("us-Us", {
