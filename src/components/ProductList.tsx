@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { IoIosPricetags } from "react-icons/io";
 const request = async (url: string) => {
   const req = await fetch(url);
@@ -20,9 +21,12 @@ async function ProductList() {
     <div className="grid  gap-7 ">
       {data.products.map((product: Product) => {
         return (
-          <div className="card card-side bg-gray-200 shadow-xl">
+          <div
+            className="card card-side bg-gray-200 shadow-xl"
+            key={product.id}
+          >
             <figure className=" border-r-2 border-orange-500">
-              <img src={product.thumbnail} alt={product.title} />
+              <Image src={product.thumbnail} alt={product.title} />
             </figure>
             <div className="card-body">
               <h1 className="card-title">{product.title}</h1>

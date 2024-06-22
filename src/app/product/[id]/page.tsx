@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ParamsInterFace = {
   params: {
     id: number;
@@ -27,8 +29,8 @@ async function SingleProduct(params: ParamsInterFace) {
       <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box h-96">
         {product.images.map((img) => {
           return (
-            <div className="carousel-item border  border-gray-600 ">
-              <img src={img} alt="" />
+            <div className="carousel-item border  border-gray-600  " key={img}>
+              <Image src={img} alt={product.title} width={403} height={403} />
             </div>
           );
         })}
@@ -44,7 +46,10 @@ async function SingleProduct(params: ParamsInterFace) {
           <span className="font-bold ">Brand:</span>
           {product.brand}
         </p>
-        <p><span className="font-bold">warranty:</span>{product.warrantyInformation}</p>
+        <p>
+          <span className="font-bold">warranty:</span>
+          {product.warrantyInformation}
+        </p>
         <p>
           <span className="  font-bold">Price: </span>
           {new Intl.NumberFormat("us-Us", {
