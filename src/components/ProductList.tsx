@@ -9,7 +9,7 @@ const request = async (url: string) => {
 interface Product {
   title: string;
   description: string;
-  thumbnail: string;
+  thumbnail: strinsxs
   id: number;
   price: number;
 }
